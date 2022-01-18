@@ -12,3 +12,26 @@ export const registrarUsuario = (usuario) => {
         })
     })
 }
+
+//Función para obtener datos del usuario actual conectado usando web services .NET Core
+export const obtenerUsuarioActual = () => {
+    //Crear promesa para esperar a finalización servicio web asincrono
+    return new Promise((resolve, reject) => {
+        //Usar método GET
+        HttpCliente.get("/Usuario").then(response => {
+            //Obtener respuesta del servicio web
+            resolve(response);
+        })
+    })
+}
+
+//Función para actualizar datos del usuario actual conectado usando web services .NET Core
+export const actualizarUsuario = (usuario) => {
+    return new Promise((resolve, reject) => {
+        //Usar método PUT
+        HttpCliente.put('/Usuario', usuario).then(response => {
+            //Obtener respuesta del servicio web
+            resolve(response);
+        })
+    })
+}

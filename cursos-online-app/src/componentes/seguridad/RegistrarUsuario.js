@@ -1,5 +1,11 @@
 //Importar componentes de Material Design
-import { Button, Container, Grid, TextField, Typography } from "@material-ui/core";
+import {
+    Button,
+    Container,
+    Grid,
+    TextField,
+    Typography,
+} from "@material-ui/core";
 import React, { useState } from "react";
 //Importar objeto JSON con los estilos
 import style from "../tool/Style";
@@ -35,10 +41,10 @@ const RegistrarUsuario = () => {
         //Para evitar que la página se refresque
         e.preventDefault();
         //Llamar action para registrar usuario
-        registrarUsuario(usuario).then(response => {
+        registrarUsuario(usuario).then((response) => {
             console.log("Se registro exitosamente el usuario", response);
             //Almacenar token obtenido para el usuario en el localStorage del navegador
-            window.localStorage.setItem("token_seguridad", response.data);
+            window.localStorage.setItem("token_seguridad", response.data.token);
         });
     };
 
@@ -57,9 +63,9 @@ const RegistrarUsuario = () => {
         form style = { style.form } > { " " } { /* Componente grid de Material Design (Padre) */ } { " " } <
         Grid container spacing = { 2 } > { " " } {
             /* Componente grid de Material Design (Hijo)
-                                                                xs={12} => Significa que si el dispositivo es un móvil va a ocupar toda la pantalla
-                                                                md={6} => Significa que si el dispositivo es una tablet o superior 
-                                                                va a ocupar la mitad de la pantalla */
+                                                                            xs={12} => Significa que si el dispositivo es un móvil va a ocupar toda la pantalla
+                                                                            md={6} => Significa que si el dispositivo es una tablet o superior 
+                                                                            va a ocupar la mitad de la pantalla */
         } { " " } <
         Grid item xs = { 12 }
         md = { 12 } > { " " } { /* Componente para caja de texto de Material Design */ } { " " } <
@@ -72,9 +78,9 @@ const RegistrarUsuario = () => {
         <
         /Grid>{" "} {
             /* Componente grid de Material Design (Hijo)
-                                                                xs={12} => Significa que si el dispositivo es un móvil va a ocupar toda la pantalla
-                                                                md={6} => Significa que si el dispositivo es una tablet o superior 
-                                                                va a ocupar la mitad de la pantalla */
+                                                                            xs={12} => Significa que si el dispositivo es un móvil va a ocupar toda la pantalla
+                                                                            md={6} => Significa que si el dispositivo es una tablet o superior 
+                                                                            va a ocupar la mitad de la pantalla */
         } { " " } <
         Grid item xs = { 12 }
         md = { 6 } >
