@@ -27,9 +27,22 @@ export const obtenerUsuarioActual = () => {
 
 //Función para actualizar datos del usuario actual conectado usando web services .NET Core
 export const actualizarUsuario = (usuario) => {
+    //Crear promesa para esperar a finalización servicio web asincrono
     return new Promise((resolve, reject) => {
         //Usar método PUT
         HttpCliente.put('/Usuario', usuario).then(response => {
+            //Obtener respuesta del servicio web
+            resolve(response);
+        })
+    })
+}
+
+//Función para realizar el logueo usando web services .NET Core
+export const loginUsuario = (usuario) => {
+    //Crear promesa para esperar a finalización servicio web asincrono
+    return new Promise((resolve, reject) => {
+        //Usar método POST
+        HttpCliente.post('/Usuario/login', usuario).then(response => {
             //Obtener respuesta del servicio web
             resolve(response);
         })

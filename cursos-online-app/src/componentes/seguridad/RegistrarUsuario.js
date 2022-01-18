@@ -1,11 +1,5 @@
 //Importar componentes de Material Design
-import {
-    Button,
-    Container,
-    Grid,
-    TextField,
-    Typography,
-} from "@material-ui/core";
+import { Button, Container, Grid, TextField, Typography } from "@material-ui/core";
 import React, { useState } from "react";
 //Importar objeto JSON con los estilos
 import style from "../tool/Style";
@@ -55,33 +49,32 @@ const RegistrarUsuario = () => {
         maxWidth = "md"
         justify = "center" >
         <
-        div style = { style.paper } > { " " } { /* Componente para titulos de Material Design */ } { " " } <
+        div style = { style.paper } > { /* Componente para titulos de Material Design */ } <
         Typography component = "h1"
         variant = "h5" >
-        Registro de Usuarios { " " } <
-        /Typography>{" "} <
-        form style = { style.form } > { " " } { /* Componente grid de Material Design (Padre) */ } { " " } <
-        Grid container spacing = { 2 } > { " " } {
+        Registro de Usuarios <
+        /Typography> <
+        form style = { style.form } > { /* Componente grid de Material Design (Padre) */ } <
+        Grid container spacing = { 2 } > {
             /* Componente grid de Material Design (Hijo)
-                                                                            xs={12} => Significa que si el dispositivo es un móvil va a ocupar toda la pantalla
-                                                                            md={6} => Significa que si el dispositivo es una tablet o superior 
-                                                                            va a ocupar la mitad de la pantalla */
-        } { " " } <
+                            xs={12} => Significa que si el dispositivo es un móvil va a ocupar toda la pantalla
+                            md={6} => Significa que si el dispositivo es una tablet o superior 
+                            va a ocupar la mitad de la pantalla */
+        } <
         Grid item xs = { 12 }
-        md = { 12 } > { " " } { /* Componente para caja de texto de Material Design */ } { " " } <
+        md = { 12 } > { /* Componente para caja de texto de Material Design */ } <
         TextField name = "NombreCompleto"
         value = { usuario.NombreCompleto }
         onChange = { ingresarValoresMemoria }
         variant = "outlined"
-        fullWidth label = "Ingrese nombre y apellidos" /
-        >
+        fullWidth label = "Ingrese nombre y apellidos" / >
         <
-        /Grid>{" "} {
+        /Grid> {
             /* Componente grid de Material Design (Hijo)
-                                                                            xs={12} => Significa que si el dispositivo es un móvil va a ocupar toda la pantalla
-                                                                            md={6} => Significa que si el dispositivo es una tablet o superior 
-                                                                            va a ocupar la mitad de la pantalla */
-        } { " " } <
+                            xs={12} => Significa que si el dispositivo es un móvil va a ocupar toda la pantalla
+                            md={6} => Significa que si el dispositivo es una tablet o superior 
+                            va a ocupar la mitad de la pantalla */
+        } <
         Grid item xs = { 12 }
         md = { 6 } >
         <
@@ -89,10 +82,9 @@ const RegistrarUsuario = () => {
         value = { usuario.Email }
         onChange = { ingresarValoresMemoria }
         variant = "outlined"
-        fullWidth label = "Ingrese email" /
-        >
+        fullWidth label = "Ingrese email" / >
         <
-        /Grid>{" "} <
+        /Grid> <
         Grid item xs = { 12 }
         md = { 6 } >
         <
@@ -100,10 +92,9 @@ const RegistrarUsuario = () => {
         value = { usuario.Username }
         onChange = { ingresarValoresMemoria }
         variant = "outlined"
-        fullWidth label = "Ingrese username" /
-        >
+        fullWidth label = "Ingrese username" / >
         <
-        /Grid>{" "} <
+        /Grid> <
         Grid item xs = { 12 }
         md = { 6 } >
         <
@@ -112,10 +103,9 @@ const RegistrarUsuario = () => {
         onChange = { ingresarValoresMemoria }
         type = "password"
         variant = "outlined"
-        fullWidth label = "Ingrese password" /
-        >
+        fullWidth label = "Ingrese password" / >
         <
-        /Grid>{" "} <
+        /Grid> <
         Grid item xs = { 12 }
         md = { 6 } >
         <
@@ -124,27 +114,26 @@ const RegistrarUsuario = () => {
         onChange = { ingresarValoresMemoria }
         type = "password"
         variant = "outlined"
-        fullWidth label = "Confirme password" /
-        >
+        fullWidth label = "Confirme password" / >
         <
-        /Grid>{" "} <
-        /Grid>{" "} { /* Sección botones */ } { " " } <
+        /Grid> <
+        /Grid> { /* Sección botones */ } <
         Grid container justifyContent = "center" >
         <
         Grid item xs = { 12 }
-        md = { 6 } > { " " } { /* Componente para botón de Material Design */ } { " " } <
+        md = { 6 } > { /* Componente para botón de Material Design */ } <
         Button type = "submit"
         onClick = { registrarUsuarioBoton }
         fullWidth variant = "contained"
         color = "primary"
         size = "large"
         style = { style.submit } >
-        Enviar { " " } <
-        /Button>{" "} <
-        /Grid>{" "} <
-        /Grid>{" "} <
-        /form>{" "} <
-        /div>{" "} <
+        Enviar <
+        /Button> <
+        /Grid> <
+        /Grid> <
+        /form> <
+        /div> <
         /Container>
     );
 };
