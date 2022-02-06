@@ -14,11 +14,17 @@ export const registrarUsuario = (usuario) => {
 }
 
 //Función para obtener datos del usuario actual conectado usando web services .NET Core
-export const obtenerUsuarioActual = () => {
+export const obtenerUsuarioActual = (dispatch) => {
     //Crear promesa para esperar a finalización servicio web asincrono
     return new Promise((resolve, reject) => {
         //Usar método GET
         HttpCliente.get("/Usuario").then(response => {
+            //Por medio del dispatch se invoca al Reducer
+            dispatch({
+                type: "INICIAR_SESION",
+                sesion: response.data,
+                autenticado: true
+            });
             //Obtener respuesta del servicio web
             resolve(response);
         })

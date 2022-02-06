@@ -41,44 +41,36 @@ const Login = () => {
 
     return (
         //Componente contenedor de Material Design
-        <
-        Container maxWidth = "xs" >
-        <
-        div style = { style.paper } > { /* Componente para avatar de Material Design */ } <
-        Avatar style = { style.avatar } > { /* Usar componente de icono importado */ } <
-        LockOutlinedIcon style = { style.icon }
-        /> <
-        /Avatar> { /* Componente para titulos de Material Design */ } <
-        Typography component = "h1"
-        variant = "h5" >
-        Login de Usuario <
-        /Typography> <
-        form style = { style.form } > { /* Componente caja de texto de Material Design */ } <
-        TextField name = "Email"
-        value = { usuario.Email }
-        onChange = { ingresarValoresMemoria }
-        variant = "outlined"
-        label = "Ingrese su email"
-        fullWidth margin = "normal" / >
-        <
-        TextField name = "Password"
-        value = { usuario.Password }
-        onChange = { ingresarValoresMemoria }
-        type = "password"
-        variant = "outlined"
-        label = "Ingrese su password"
-        fullWidth margin = "normal" / > { /* Componente para botón de Material Design */ } <
-        Button type = "submit"
-        onClick = { loginUsuarioBoton }
-        variant = "contained"
-        color = "primary"
-        style = { style.submit }
-        fullWidth >
-        Enviar <
-        /Button> <
-        /form> <
-        /div> <
-        /Container>
+        <Container maxWidth = "xs">
+            <div style = { style.paper } > { /* Componente para avatar de Material Design */ } 
+                <Avatar style = { style.avatar } > { /* Usar componente de icono importado */ } 
+                    <LockOutlinedIcon style = { style.icon }/> 
+                </Avatar> { /* Componente para titulos de Material Design */ } 
+                <Typography component = "h1" variant = "h5" >Login de Usuario </Typography> 
+                <form style = { style.form } > { /* Componente caja de texto de Material Design */ } 
+                    <TextField name = "Email"
+                                value = { usuario.Email }
+                                onChange = { ingresarValoresMemoria }
+                                variant = "outlined"
+                                label = "Ingrese su email"
+                                fullWidth margin = "normal" />
+                    <TextField name = "Password"
+                                value = { usuario.Password }
+                                onChange = { ingresarValoresMemoria }
+                                type = "password"
+                                variant = "outlined"
+                                label = "Ingrese su password"
+                                fullWidth margin = "normal" /> { /* Componente para botón de Material Design */ } 
+                    <Button type = "submit"
+                            onClick = { loginUsuarioBoton }
+                            variant = "contained"
+                            color = "primary"
+                            style = { style.submit }
+                            fullWidth >
+                    Enviar </Button> 
+                </form> 
+            </div> 
+        </Container>
     );
 };
 

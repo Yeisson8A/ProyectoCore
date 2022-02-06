@@ -3,10 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+//Importar Reducers y provider para manejo de variables de estado globales
+import {initialState} from './contexto/initialState';
+import {StateProvider} from './contexto/store';
+import {mainReducer} from './contexto/reducers';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* Al provider se le indica el initialState donde se guardaran las variables globales y los Reducers */}
+    <StateProvider initialState={initialState} reducer={mainReducer}>
+      <App />
+    </StateProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
